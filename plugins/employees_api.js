@@ -3,8 +3,7 @@ module.exports = function(options) {
     var seneca = this;
     var id;
     seneca.add({init:'employees_api'}, function(args,done){
-        /*var entities = require('seneca-entity');
-        seneca.use('entity');*/
+        seneca.use('entity');
         seneca.use('mongo-store', {
                 uri: 'mongodb://127.0.0.1:27017/microservices'
         });
