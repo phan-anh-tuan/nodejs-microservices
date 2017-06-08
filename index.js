@@ -57,9 +57,9 @@ var config = {
 };
 
 var seneca = Seneca()
- /* .use('entity')
+  /*.use('entity')
   .use('mongo-store', {
-                uri: 'mongodb://127.0.0.1:27017/microservices'
+    uri: 'mongodb://127.0.0.1:27017/microservices'
         })*/
   .use(api)
   .use(employees_plugin)

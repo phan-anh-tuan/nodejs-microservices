@@ -1,7 +1,7 @@
 'use strict'
 module.exports = function(options) {
     var seneca = this;
-    var id;
+    
     seneca.add({init:'employees_api'}, function(args,done){
         seneca.use('entity');
         seneca.use('mongo-store', {
@@ -19,7 +19,6 @@ module.exports = function(options) {
         seneca.make('employee').data$(employee).save$(function(err,result){
             if (err) { console.error(err); }
             else {
-                id = result.id;
                 console.log(result);
             }
         }); 
